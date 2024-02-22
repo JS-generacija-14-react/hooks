@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Counter from "./components/Counter";
+import { useState } from "react";
+import Select from "./components/Select";
+import SongList from "./components/SongList";
 function App() {
+  const [show, setShow] = useState(true);
+  const [show2, setShow2] = useState(true);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* uslovno renderovanje */}
+      {/* {show && show2 ? <Counter /> : null} */}
+      {/* {show && <Counter />} */}
+
+      {/* <button onClick={() => setShow(!show)}>{show ? "hide" : "show"}</button> */}
+
+      {/* <Select /> */}
+      <SongList />
     </div>
   );
 }
